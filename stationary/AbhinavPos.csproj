@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>POSApp</AssemblyName>
+    <RootNamespace>POSApp</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <WarningLevel>0</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <AnalysisLevel>none</AnalysisLevel>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <NuGetAudit>false</NuGetAudit>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\PosServer\AppStore.cs" Link="AppStore.cs" />
+  </ItemGroup>
+
+  <Target Name="EnsureFreshSelfContainedDeps" BeforeTargets="BeforeBuild;GenerateBuildDependencyFile;GenerateBuildRuntimeConfigurationFiles">
+    <Delete Files="$(ProjectDepsFilePath);$(ProjectRuntimeConfigFilePath)" ContinueOnError="true" />
+  </Target>
+
+</Project>

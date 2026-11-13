@@ -1,0 +1,6 @@
+{
+  "name": "Kanha POS & ERP Suite",
+  "description": "Enterprise Retail POS, Inventory, GST/Non-GST Billing, Multi-Store Cloud Sync, and Server Administration Suite.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
